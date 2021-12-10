@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="../static/jquery-3.3.1.min.js" ></script>
+   <script src="../static/bootstrap.min.js"></script>
+   <link href="../static/bootstrap.min.css" rel="stylesheet" />
+   <link href="../static/site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Data Access : MongoDb</a>
+                  </div>
+                  <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                      
+                    </ul>
+                  </div><!--/.nav-collapse -->
+                </div>
+    </nav>
+    <div class="container body-content" >
+        <br />
+        <h2>Modify Product</h2>
+        <hr />
+        <form action="/update" method="POST">
+          <input type="hidden" name="id" class="form-control" value="<%= product._id %>" />
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Id</label>
+              <div class="col-md-3">
+                <input required type="text" name="pid" class="form-control" value="<%= product.pid %>" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Name</label>
+              <div class="col-md-3">
+                <input required type="text" name="name" class="form-control" value="<%= product.product_name %>" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product brand</label>
+              <div class="col-md-3">
+                <input required type="text" name="brand" class="form-control" value="<%= product.product_brand %>" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Desc</label>
+              <div class="col-md-3">
+                <input required type="text" name="desc" class="form-control" value="<%= product.product_description %>" />
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-md-3">
+              </div>
+              <input required type="submit" value="SUBMIT" class="btn btn-primary" />
+            </div>
+          </div>
+        </form>
+        <br />
+        <hr />
+        <footer>
+            &copy; Admin
+        </footer>
+    </div>
+</body>
+</html>

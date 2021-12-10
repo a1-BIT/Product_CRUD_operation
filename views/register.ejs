@@ -1,0 +1,79 @@
+
+<html>
+<head>
+   <script src="static/jquery-3.3.1.min.js"></script>
+   <script src="static/bootstrap.min.js"></script>
+   <link href="static/bootstrap.min.css" rel="stylesheet" />
+   <link href="static/site.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Data Access : MongoDb</a>
+                  </div>
+                  <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                      
+                    </ul>
+                  </div>
+                </div>
+    </nav>
+    <div class="container body-content" >
+        <br />
+        <h2>Admin Register</h2>
+        <hr />
+        <form action="/register" method="POST">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2">Fullname</label>
+              <div class="col-md-3">
+                <input required type="text" name="fullname" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Email</label>
+              <div class="col-md-3">
+                <input required type="text" name="email" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Mobile</label>
+              <div class="col-md-3">
+                <input required type="text" name="mobile" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">User  Type</label>
+              <div class="col-md-3">
+                <select name="user_type"  class="form-control">
+                  <option  value="1">Admin</option>
+                  <option  value="0">User</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Password</label>
+              <div class="col-md-3">
+                <input required type="text" name="password" class="form-control" />
+                <br />
+                <br />
+                <input type="submit" value="SUBMIT" class="btn btn-primary" />
+              </div>
+            </div>
+          </div>
+        </form>
+        <br />
+        <hr />
+        <footer>
+            &copy; Admin
+        </footer>
+    </div>
+</body>
+</html>
